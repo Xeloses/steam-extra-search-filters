@@ -5,8 +5,8 @@ Add extra filters for Steam search.
 ## Features:
 * **Filter by price**:
     * **Actual price** - current game price (*with discount if game is on sale*).
-    * **Base price** - game cost without discount (*may be useful to filter out "trash-games"; available only if "Special Offers" filter is active*).
-* **Free games** filter - improved filter for free games.
+    * **Base price** - game cost without discount (*available only if "**Special Offers**" filter is active; may be useful to filter out "trash-games"*).
+* **Free products** filter - improved filter for free games.
 * **Demo and prologues** filter - hide demo and prologues from search results (*available only if "Free products" filter isn't active*).
 * **Special Offers** filter improvement:
     * **Discount value** - filter results by discount percentage.
