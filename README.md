@@ -12,7 +12,7 @@ Add extra filters for Steam search.
     * **Discount value** - filter results by discount percentage.
 * **Filter by rating** - filter games by Steam reviews rating.
 
-![Preview](https://raw.github.com/Xeloses/steam-extra-search-filters/master/preview/preview.jpg)
+![Preview](https://github.com/Xeloses/steam-extra-search-filters/blob/master/preview/preview.jpg)
 
 ## Installation:
 1. Install **"Tampermonkey"** addon for your browser:
