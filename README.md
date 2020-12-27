@@ -21,4 +21,4 @@ Add extra filters for Steam search.
     * **Opera**: [install](https://addons.opera.com/en/extensions/details/tampermonkey-beta/)
     * **Safari** (MacOS): [install](https://apps.apple.com/us/app/tampermonkey/id1482490089)
     * **IE/Edge**: *no support (using these applications is strongly not recommended)*
-2. Install userscript: [install](https://github.com/Xeloses/steam-extra-search-filters/raw/master/steam-extra-search-filters.user.js)
+2. Install userscript: [install](https://raw.githubusercontent.com/Xeloses/steam-extra-search-filters/master/steam-extra-search-filters.user.js)
