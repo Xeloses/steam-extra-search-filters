@@ -5,8 +5,8 @@
 // @version      1.0.1
 // @license      MIT
 // @namespace    Xeloses.Steam.ExtraSearchFilters
-// @updateURL    https://github.com/Xeloses/steam-extra-search-filters/raw/master/steam-extra-search-filters.user.js
-// @downloadURL  https://github.com/Xeloses/steam-extra-search-filters/raw/master/steam-extra-search-filters.user.js
+// @updateURL    https://raw.githubusercontent.com/Xeloses/steam-extra-search-filters/master/steam-extra-search-filters.user.js
+// @downloadURL  https://raw.githubusercontent.com/Xeloses/steam-extra-search-filters/master/steam-extra-search-filters.user.js
 // @match        https://store.steampowered.com/search*
 // @grant        none
 // @noframes
