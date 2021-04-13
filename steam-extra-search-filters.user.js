@@ -3,7 +3,7 @@
 // @description  Add extra filters to Steam search.
 // @author       Xeloses
 // @version      1.0.1
-// @license      MIT
+// @license      GPL-3.0 (https://www.gnu.org/licenses/gpl-3.0.html)
 // @namespace    Xeloses.Steam.ExtraSearchFilters
 // @updateURL    https://raw.githubusercontent.com/Xeloses/steam-extra-search-filters/master/steam-extra-search-filters.user.js
 // @downloadURL  https://raw.githubusercontent.com/Xeloses/steam-extra-search-filters/master/steam-extra-search-filters.user.js
@@ -57,36 +57,10 @@
     if(window.self!=window.top) return;
 
     /*
-     * Output message to console.
-     * Log level:
-     *     - LOG_INFO
-     *     - LOG_WARN
-     *     - LOG_ERROR
-     *
-     * @param  {String}  msg
-     * @param  {Integer} level
-     * @return {String}
+     * @class Log
      */
-    function $log(msg,level=null)
-    {
-        if(!ENABLE_CONSOLE_OUTPUT||!msg) return;
-
-        let t = '%c[Xeloses` Steam extra filters]%c '+msg,
-            hStyle = 'color:#c5c;font-weight:bold;',
-            tStyle = 'color:#ddd;font-weight:normal;';
-
-        switch(level)
-        {
-            case LOG_INFO:
-                console.info(t,hStyle,tStyle+'font-style:italic;');break;
-            case LOG_WARN:
-                console.warn(t,hStyle,tStyle);break;
-            case LOG_ERROR:
-                console.error(t,hStyle,tStyle);break;
-            default:
-                console.log(t,hStyle,tStyle);break;
-        }
-    }
+    class XelLog{constructor(){let d=GM_info.script;this.author=d.author;this.app=d.name;this.ns=d.namespace;this.version=d.version;this.h='color:#c5c;font-weight:bold;';this.t='color:#ddd;font-weight:normal;';}log(s){console.log('%c['+this.app+']%c '+s,this.h,this.t)}info(s){console.info('%c['+this.app+']%c '+s,this.h,this.t+'font-style:italic;')}warn(s){console.warn('%c['+this.app+']%c '+s,this.h,this.t)}error(s){console.error('%c['+this.app+']%c '+s,this.h,this.t)}dump(v){console.log(v)}}
+    const $log = new XelLog();
 
     /*
      * Extend JS Number: add method to check value is within a range.
