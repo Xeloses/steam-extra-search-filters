@@ -13,6 +13,15 @@
 // @run-at       document-end
 // ==/UserScript==
 
+// https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+
+/**
+ * @todo + "Hide TBA (to be announced) products" option
+ * @todo + "Hide Ignored products" option
+ * @todo + Save filter options
+ * @todo IMPROVE "Only F2P" option (hide non F2P games)
+ */
+
 (function(){
     'use strict';
 
@@ -42,11 +51,11 @@
 
     let FILTERED = false;
 
-    // @var jQuery object
-    let $JQ = null;
-
-    // prevent script execution in <frame>s:
-    if(window.self!=window.top) return;
+    /*
+     * @const jQuery object
+     */
+    const $JQ = (typeof $J === 'function' ) ? $J : ((typeof jQuery === 'function') ? jQuery : null);
+    if(!$JQ || typeof $JQ !== 'function') return;
 
     /*
      * @class Log
@@ -706,22 +715,17 @@
         ).appendTo('head');
     }
 
+    /*
+     * MAIN ROUTINE:
+     */
+
     // check URL:
     if(/^https:\/\/store\.steampowered\.com\/search[\/]?\?/i.test(window.location.href))
     {
-
-        // get jQuery:
-        $JQ = (typeof $J === 'function') ? $J : ((typeof jQuery === 'function') ? jQuery : null);
-        if(!$JQ)
-        {
-            $log('Could not get jQuery instance.',LOG_ERROR);
-            return;
-        }
-
         injectCSS();
         renderForm();
         setupHook(/https:\/\/store\.steampowered\.com\/search\/results[\/]?\?/i,filterResponse);
 
-        $log('App loaded.');
+        $log.info('App loaded.');
     }
 })();
