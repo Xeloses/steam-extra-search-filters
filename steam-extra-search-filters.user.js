@@ -20,14 +20,6 @@
     /* globals jQuery */
     /* globals rgPriceStopData */
 
-    // @const Enable/disable status & error output to console
-    const ENABLE_CONSOLE_OUTPUT = true;
-
-    // @const Console message types
-    const LOG_INFO = 1;
-    const LOG_WARN = 2;
-    const LOG_ERROR = 3;
-
     // @var filter options
     let OPTIONS = {
         // flags:
